@@ -24,10 +24,12 @@
                     <li><a href="#">About</a></li>
                     <li><a href="#">Sign Up</a></li>
                 </ul>
-                <input type="text" name="search" id="search" placeholder="What are you looking for?">
+                <div class="search-bar">
+                    <input type="text" name="search" id="search" placeholder="What are you looking for?">
                 <button type="submit">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
+                </div>
                 <div class="header-icons">
                     <div class="icon">
                         <a href="#">
@@ -42,5 +44,35 @@
                 </div>
         </div>
     </header>
-</body>
+        <div class="container">
+            <img src="images/login.jpg">
+        <form>
+            <h2>Create an account</h2>
+            <h5>Enter your details below</h5>
+        <div class="inputs">
+        
+        <input type="text" placeholder="Enter your name" id="contact-name" onkeyup="validateName()" />
+        <span id="name-error"></span>
+        </div>
+
+        <div class="inputs">
+        <input type="tel"  placeholder="01201123453" id="contact-phone" onkeyup="validatePhone()"/>
+        <span id="phone-error"></span>
+
+        </div>
+
+        <div class="inputs">
+        <input type="email" placeholder="Enter Mail" id="contact-email" onkeyup="validateEmail()">
+        <span id="email-error"></span>
+
+        </div>
+
+        <button onclick="return validateForm()" >Log In</button>
+        <span id="submit-error"></span>
+
+        
+        </form>
+    </div>
+    <script src="JS/login.js"></script>
+    </body>
 </html>

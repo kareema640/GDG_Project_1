@@ -27,7 +27,7 @@ function validatePhone(){
         phoneError.innerHTML = 'Phone No. is Required';
         return false;
     }
-    if(phone.length !== 10){
+    if(phone.length !== 11){
         phoneError.innerHTML = 'phone number should be 11 digits' ;
         return false;
     }

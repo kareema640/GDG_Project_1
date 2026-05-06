@@ -7,24 +7,20 @@
     font-family: "Poppins", sans-serif;
 }
 
-/* static colors */
 :root {
     --button-color: #DB4444;
     --p-color: #000000;
     --background-color: #F5F5F5;
     --w-color: #FFFFFF;
 }
-
 p, h1, h2, h3, h4, h5, h6 {
     color: var(--p-color);
 }
-
 input, select, button {
     border: none;
     outline: none;
 }
 
-/* TOP HEADER */
 .top-header {
     position: fixed;
     top: 0;
@@ -37,7 +33,6 @@ input, select, button {
     align-items: center;
     z-index: 1000;
 }
-
 .lang {
     margin-left: auto;
     color: var(--w-color);
@@ -67,27 +62,25 @@ input, select, button {
     text-decoration: underline solid var(--w-color);
 }
 
-/*  BOTTOM HEADER */
 header .bottom-header {
     position: fixed;          
-    top: 70px;                
+    top: 40px;                
     left: 0;
     width: 100%;
     background: var(--w-color);
-    padding: 7px 150px 20px 150px;
+    padding: 54px 150px 20px 150px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.5px solid var(--p-color);
     z-index: 999;
 }
-
 header .bottom-header p {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
     font-style: italic;
+    gap: 8px;
 }
-
 header .bottom-header .header-links {
     display: flex;
     align-items: center;
@@ -129,8 +122,6 @@ header .bottom-header button {
     background: var(--background-color);
     cursor: pointer;
 }
-
-/* ===== HEADER ICONS ===== */
 .bottom-header .header-icons {
     display: flex;
     gap: 20px;
@@ -160,12 +151,10 @@ header .bottom-header button {
     color: var(--w-color);
 }
 
-/* ===== BODY OFFSET — عشان المحتوى ميتغطاش بالـ header ===== */
 body {
     padding-top: 210px; 
 }
 
-/* ===== LOGIN CONTAINER ===== */
 .container {
     padding: 40px 80px;
     display: flex;
@@ -181,7 +170,6 @@ body {
     border-radius: 8px;
 }
 
-/* ===== FORM STYLES ===== */
 form {
     display: flex;
     flex-direction: column;
@@ -192,24 +180,17 @@ form {
 form h2 {
     font-size: 28px;
     font-weight: 600;
-    margin-bottom: 4px;
 }
 
 form > p {
     font-size: 14px;
-    color: #888;
+    color: var(--p-color);
 }
 
 .inputs {
     display: flex;
     flex-direction: column;
     gap: 6px;
-}
-
-.inputs label {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--p-color);
 }
 
 .inputs input {
@@ -232,13 +213,11 @@ form > p {
     min-height: 16px;
 }
 
-/* أيقونة الـ check الخضراء */
 .inputs span i.fa-circle-check {
     color: #28a745;
 }
 
-form button[type="submit"],
-form button:not([type]) {
+form button[type="submit"] {
     background: var(--button-color);
     color: var(--w-color);
     height: 48px;
@@ -247,11 +226,47 @@ form button:not([type]) {
     font-weight: 500;
     cursor: pointer;
     transition: opacity 0.2s;
-    margin-top: 8px;
 }
 
-form button:hover {
+form button[type="submit"]:hover {
     opacity: 0.88;
+}
+
+form .google-btn {
+    background: var(--w-color);
+    color: var(--p-color);
+    height: 48px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: border-color 0.2s;
+}
+
+form .google-btn:hover {
+    border-color: var(--p-color);
+}
+
+form .google-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+form .login-link {
+    font-size: 14px;
+    text-align: center;
+    color: var(--p-color);
+}
+
+form .login-link a {
+    color: var(--p-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 #submit-error {

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHSTOCKPAGE</title>
+    <link rel="stylesheet" href="./dashstock.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="dashboard-container">
+    <section class="sidebar">
+        <div class="logo">Dash<span style="color: black;">Stock</span></div>
+        <ul class="menu">
+            <li><i class="fa-regular fa-clock"></i>Dashboard</li>
+            <li><i class="fa-solid fa-table-cells-large"></i> Products</li>
+            <li><i class="fa-regular fa-heart"></i> Favorites</li>
+            <li><i class="fa-regular fa-message"></i> Inbox</li>
+            <li><i class="fa-solid fa-list"></i>OrderLists</li>
+            <li class="active"><i class="fa-solid fa-layer-group"></i> Product Stock</li>
+        </ul>
+        <hr></hr>
+        <div class="pages-label">PAGES</div>
+        <ul class="menu">
+            <li><i class="fa-solid fa-gift"></i>Pricing</li>
+            <li><i class="fa-solid fa-calendar"></i> Calendar</li>
+            <li><i class="fa-solid fa-clipboard-list"></i> To DO</li>
+            <li><i class="fa-regular fa-circle-user"></i> Contact</li>
+            <li><i class="fa-solid fa-money-bills"></i>In Voice </li>
+            <li><i class="fa-solid fa-chart-simple"></i> UI Elements</li>
+            <li><i class="fa-solid fa-users"></i>  Team</li>
+            <li><i class="fa-solid fa-table-cells"></i> Table</li>
+
+        </ul>
+        <hr></hr>
+        <ul class="menu">
+            <li><i class="fa-solid fa-gear"></i> Setting</li>
+            <li><i class="fa-solid fa-arrow-right-from-bracket"></i> LogOut</li>
+        </ul>
+    </section>
+
+    <section class="main-content">
+        <header class="top-nav">
+        
+            <div class="search-box">
+                <div><i class="fa-solid fa-bars"></i></div>
+                <div class="search-bar"><i style="color: rgb(179, 173, 173);" class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search"></div>
+            </div>
+             <div class="icon">
+                    <a href="#">
+                        <i class="fa-solid fa-bell"></i>
+                        <span class="count">2</span>
+                    </a>
+                </div>
+           
+        </header>
+
+        <section class="content-body">
+            <div class="header-product">
+                <div>
+                    <h1>Product Stock</h1>
+                </div>
+                 <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search Product Name">
+                </div>
+            </div>
+        
+           <table>
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Product Name</th>
+            <th>Current Price</th>
+            <th>Old Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id="wishlist-table-body">
+        </tbody>
+</table>
+        </section>
+    </section>
+</div>
+<script src="./dashstock.js"></script>
+</body>
+</html>

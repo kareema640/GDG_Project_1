@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "HAVIT HV-G92 Gamepad",
+    "price": 120,
+    "pre-price": 160,
+    "image": "../images/g92-2-500x500 1.png"
+  },
+  {
+    "id": 2,
+    "name": "AK-900 Wired Keyboard",
+    "price": 960,
+    "pre-price": 1160,
+    "image": "../images/ak-900-01-500x500 1.png"
+  },
+  {
+    "id": 3,
+    "name": "IPS LCD Gaming Monitor",
+    "price": 370,
+    "pre-price": 400,    
+    "image": "../images/g27cq4-500x500 1.png"
+  },
+  {
+    "id": 4,
+    "name": "RGB liquid CPU Cooler",
+    "price": 160,
+    "pre-price": 200,
+    "image": "../images/gammaxx-l240-argb-1-500x500 1.png"
+  }
+]

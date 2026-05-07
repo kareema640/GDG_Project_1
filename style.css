@@ -6,6 +6,9 @@
     text-decoration: none;
     font-family: "Poppins", sans-serif;
 }
+body {
+    padding-top: 150px; 
+}
 /* static colors */
 :root {
     --button-color: #DB4444;
@@ -162,9 +165,52 @@ header .bottom-header button {
     color: var(--w-color);
     font-weight: 600;
 }
+/* user icon menu */
+.dropdown {
+    position: fixed;
+    top: 115px;
+    right: 150px;
+    width: 220px;
+    background: rgba(40, 40, 50, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
 
-body {
-    padding-top: 155px; 
+.dropdown.open {
+    display: block;
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+.dropdown a:hover {
+    background:#0000000A;
+    opacity: 0.5;
+}
+
+#user-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: inherit;
 }
 /* create account form */
 .container {

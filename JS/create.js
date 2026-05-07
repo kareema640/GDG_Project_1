@@ -1,6 +1,21 @@
+var nameError = document.getElementById("name-error");
 var emailError = document.getElementById("email-error");
 var passwordError = document.getElementById("password-error");
 var submitError = document.getElementById("submit-error");
+
+function validateName() {
+    var name = document.getElementById("contact-name").value;
+    if (name.length == 0) {
+        nameError.innerHTML = 'Name is Required';
+        return false;
+    }
+    if (!name.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+        nameError.innerHTML = 'Write full name';
+        return false;
+    }
+    nameError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
+    return true;
+}
 
 function validateEmail() {
     var value = document.getElementById("contact-email").value.trim();
@@ -11,7 +26,7 @@ function validateEmail() {
     var isEmail = value.match(/^[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/);
     var isPhone = value.match(/^01[0-9]{9}$/);
     if (!isEmail && !isPhone) {
-        emailError.innerHTML = 'Enter a valid email or phone number';
+        emailError.innerHTML = 'Enter a valid email or Egyptian phone number';
         return false;
     }
     emailError.innerHTML = '<i class="fa-solid fa-circle-check"></i>';
@@ -33,7 +48,7 @@ function validatePassword() {
 }
 
 function validateForm() {
-    var valid = validateEmail() & validatePassword();
+    var valid = validateName() & validateEmail() & validatePassword();
     if (!valid) {
         submitError.style.display = 'block';
         submitError.innerHTML = 'Please fix errors to submit';

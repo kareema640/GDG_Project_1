@@ -164,7 +164,7 @@ header .bottom-header button {
 }
 
 body {
-    padding-top: 210px; 
+    padding-top: 155px; 
 }
 /* create account form */
 .container {
@@ -326,4 +326,36 @@ form .login-link a {
 
 .hide-icons .search-bar {
     margin-left: auto;
+}
+
+/* sidebar style */
+.menu {
+    padding: 0px 150px;
+}
+
+.menu-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.menu .sidebar {
+    width: 250px;
+    border-right: 0.5px solid #ccc;
+    padding:40px 20px;
+}
+
+.menu .sidebar a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 ;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--p-color);
+}
+.menu .menu-container img{
+    width: 910px;
+    height: 400;
+    padding: 40px;
+    margin: 10px;
 }

@@ -26,11 +26,9 @@ function renderFlashSales(products) {
     container.innerHTML = '';
 
     products.forEach(product => {
-        // عشان نعمل discount عشوائي زي الـ Figma
         const discount = Math.floor(Math.random() * 40) + 10;
         const oldPrice = (product.price * 1.3).toFixed(2);
 
-        // عشان نعمل نجوم
         const stars = Math.round(product.rating.rate);
         const starsHTML = '★'.repeat(stars) + '☆'.repeat(5 - stars);
 
@@ -85,3 +83,44 @@ function updateTimer() {
 
 updateTimer();
 setInterval(updateTimer, 1000);
+
+// for baest selling 
+
+fetch('https://fakestoreapi.com/products?limit=4')
+    .then(res => res.json())
+    .then(data => renderBestSelling(data))
+
+function renderBestSelling(products) {
+    const container = document.getElementById('best-selling-container');
+    container.innerHTML = '';
+
+    products.forEach(product => {
+        const oldPrice = (product.price * 1.3).toFixed(2);
+        const stars = Math.round(product.rating.rate);
+        const starsHTML = '★'.repeat(stars) + '☆'.repeat(5 - stars);
+
+        container.innerHTML += `
+            <div class="product-card">
+                <div class="product-img-wrapper">
+                    <img src="${product.image}" alt="${product.title}">
+                    <div class="product-actions">
+                        <button class="wishlist-btn"><i class="fa-regular fa-heart"></i></button>
+                        <button class="view-btn"><i class="fa-regular fa-eye"></i></button>
+                    </div>
+                    <button class="add-to-cart-btn">Add To Cart</button>
+                </div>
+                <div class="product-info">
+                    <h3>${product.title}</h3>
+                    <div class="product-price">
+                        <span class="new-price">$${product.price}</span>
+                        <span class="old-price">$${oldPrice}</span>
+                    </div>
+                    <div class="product-rating">
+                        <span class="stars">${starsHTML}</span>
+                        <span class="reviews">(${product.rating.count})</span>
+                    </div>
+                </div>
+            </div>
+        `
+    });
+}

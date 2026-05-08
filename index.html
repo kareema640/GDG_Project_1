@@ -55,10 +55,13 @@
                     </a>
                 </div>
                 <div class="icon">
-                    <button id="user-btn" onclick="toggleDropdown()">
-                        <i class="fa-regular fa-user"></i>
-                    </button>
-                </div>
+    <button id="user-btn" onclick="toggleDropdown()">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="10" r="5" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M5 27C5 22 9.5 18 16 18C22.5 18 27 22 27 27" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+    </button>
+</div>
             </div>
         </div>
         </header>
@@ -79,8 +82,38 @@
     <img src="images/Frame 560.svg">
     </div>
 </section>
-
-
+<!-- flash sales -->
+<section class="flash-sales">
+    <div class="section-header">
+        <div class="header-left">
+            <span class="section-tag">Today's</span>
+            <h2>Flash Sales</h2>
+        </div>
+        <div class="timer">
+            <div class="time-box">
+                <small>Days</small>
+                <span id="days">03</span>
+            </div>
+            <span class="colon">:</span>
+            <div class="time-box">
+                <small>Hours</small>
+                <span id="hours">23</span>
+            </div>
+            <span class="colon">:</span>
+            <div class="time-box">
+                <small>Minutes</small>
+                <span id="minutes">19</span>
+            </div>
+            <span class="colon">:</span>
+            <div class="time-box">
+                <small>Seconds</small>
+                <span id="seconds">56</span>
+            </div>
+        </div>
+    </div>
+    <div class="flash-sales-container" id="flash-sales-container"></div>
+    <button class="view-all-btn">View All Products</button>
+</section>
 </body>
 <script src="JS/script.js"></script>
 

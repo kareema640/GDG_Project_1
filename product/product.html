@@ -10,7 +10,7 @@
 </head>
 <body>
 <!-- header -->
- <header>
+<header>
         <div class="top-header">
             <p>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <span>ShopNow</span></p>
             <div class="lang"> English <i class="fa-solid fa-angle-down"></i>
@@ -19,32 +19,48 @@
         <div class="bottom-header">
             <p>Exclusive</p>
             <ul class="header-links">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="Contact/contact.html">Contact</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="#">Sign Up</a></li>
+                <li><a href="signup.html">Sign Up</a></li>
             </ul>
             <div class="search-bar">
                 <input type="text" name="search" id="search" placeholder="What are you looking for?">
-                <button type="submit">
+                <button type="button">
                     <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
             </div>
+            <div class="dropdown" id="dropdown">
+                <a href="#"><i class="fa-regular fa-user"></i> Manage My Account</a>
+                <a href="#"><i class="fa-regular fa-bag-shopping"></i> My Order</a>
+                <a href="#"><i class="fa-regular fa-circle-xmark"></i> My Cancellations</a>
+                <a href="#"><i class="fa-regular fa-star"></i> My Reviews</a>
+                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+            </div>
             <div class="header-icons">
                 <div class="icon">
+                    <ahref="#">
+                        <img src="../images/Vector.svg">
+                        <span class="count count-fav">0</span>
+                    </ahref=>
+                </div>
+                <div class="icon">
                     <a href="#">
-                        <i class="fa-regular fa-heart"></i>
-                        <span class=" count count-fav">0</span>
+                        <img src="../images/Cart1.svg">
+                        <span class="count count-item">0</span>
                     </a>
                 </div>
                 <div class="icon">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                    <span class=" count count-item">0</span>
-                </div>
+    <button id="user-btn" onclick="toggleDropdown()">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="10" r="5" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M5 27C5 22 9.5 18 16 18C22.5 18 27 22 27 27" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+    </button>
+</div>
             </div>
         </div>
-    </header>
-
+        </header>
 
 <!-- container -->
 

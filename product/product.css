@@ -1,20 +1,15 @@
-
-
-body{
-margin :0;
-padding: 0;
-
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
 }
-body a{
-  color:black
+body {
+    padding-top: 150px; 
 }
-a:hover{
-  color: blue;
-}
-button:hover{
-  transform: scale(1.05);
-}
-/*header*/
+                                /* static colors */
 :root {
     --button-color: #DB4444;
     --p-color: #000000;
@@ -54,7 +49,7 @@ input, select, button {
 .lang i {
     color: var(--w-color);
 }
-
+                                /* top header style */
 .top-header p {
     position: absolute;
     left: 50%;
@@ -69,7 +64,7 @@ input, select, button {
     font-weight: 600;
     text-decoration: underline solid var(--w-color);
 }
-
+                                /* bottom header style */
 header .bottom-header {
     position: fixed;          
     top: 40px;                
@@ -133,32 +128,113 @@ header .bottom-header button {
 .bottom-header .header-icons {
     display: flex;
     gap: 20px;
-    margin-right: 200px;
+}
+.hide-icons .header-icons {
+    display: none;
 }
 
+.hide-icons .header-links {
+    margin-right: auto;
+    margin-left: 50px;
+}
+
+.hide-icons .search-bar {
+    margin-left: auto;
+}
 .bottom-header .header-icons .icon {
     position: relative;
     cursor: pointer;
 }
-
-.bottom-header .header-icons .icon i {
+.bottom-header .header-icons .icon i{
     font-size: 20px;
-    color: var(--p-color);
+    -webkit-text-stroke: 0.1px ;
+    font-weight: 50;
+    padding-bottom: 13px;
+}
+.bottom-header .header-icons .icon img ,svg {
+    width: 24px;
+    height: 24px;
 }
 
 .bottom-header .header-icons .icon .count {
     background: var(--button-color);
     position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 18px;
-    height: 18px;
+    top: -8px;
+    right: -8px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     text-align: center;
-    line-height: 18px;
-    font-size: 11px;
+    line-height: 16px;
+    font-size: 10px;
     color: var(--w-color);
+    font-weight: 600;
 }
+                                /* user icon menu */
+.dropdown {
+    position: fixed;
+    top: 115px;
+    right: 150px;
+    width: 220px;
+    background: rgba(40, 40, 50, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+    z-index: 1001;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    padding-bottom: 10px;
+}
+
+.dropdown.open {
+    display: block;
+}
+
+.dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 13px 5px 20px;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
+}
+
+.dropdown a:hover {
+    background:#0000000A;
+    opacity: 0.5;
+}
+
+#user-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: inherit;
+}
+          /* end header */
+
+body{
+margin :0;
+padding: 0;
+
+}
+body a{
+  color:black
+}
+a:hover{
+  color: blue;
+}
+button:hover{
+  transform: scale(1.05);
+}
+
 /*container*/
 .title{
   padding: 50px 50px 0 50px;
@@ -262,10 +338,10 @@ header .bottom-header button {
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
-  background:red;
+  background:var(--button-color);
   color: white ;
   box-shadow: none;
-  border: 2px solid red;
+  border: 2px solid var(--button-color);
 }
 
 
@@ -288,7 +364,7 @@ header .bottom-header button {
 
 }
 #plus,#minus{
-  background: red;
+  background: var(--button-color);
   color: white;
   border: none;
 }
@@ -300,7 +376,7 @@ header .bottom-header button {
 
 }
 #buy {
-  background: red;
+  background:var(--button-color);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -317,7 +393,7 @@ header .bottom-header button {
 
 }
 #fav:hover{
-  background: red;
+  background: var(--button-color);
   color: white;
 }
 #fav i{
@@ -369,7 +445,7 @@ header .bottom-header button {
 .bar{
   width: 15px;
   height: 31px;
-  background-color: red;
+  background-color: var(--button-color);
   border-radius:2px ;
   
 }
@@ -411,7 +487,7 @@ header .bottom-header button {
     position: absolute;
     top: 12px;
     left: 12px;
-    background: #db4444;
+    background: var(--button-color);
     color: white;
     padding: 4px 12px;
     border-radius: 4px;
@@ -443,7 +519,7 @@ header .bottom-header button {
 }
 
 .icon-btn:hover {
-    background: #db4444;
+    background: var(--button-color);
     color: white;
 }
 
@@ -483,7 +559,7 @@ header .bottom-header button {
 }
 
 .current-price {
-    color: #db4444;
+    color: var(--button-color);
     font-weight: bold;
     margin-right: 12px;
 }

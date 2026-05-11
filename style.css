@@ -389,8 +389,8 @@ form .login-link a {
 }
 
 .menu .sidebar {
-    width: 250px;
-    border-right: 0.5px solid #ccc;
+    white-space: nowrap;
+    border-right: 0.5px solid var(--p-color);
     padding:40px 20px;
 }
 
@@ -398,7 +398,7 @@ form .login-link a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0 ;
+    padding: 12px 20px;
     font-size: 16px;
     font-weight: 400;
     color: var(--p-color);
@@ -661,7 +661,7 @@ form .login-link a {
 
 .header-arrows {
     display: flex;
-    padding-left: 750px;
+    padding-left: 700px;
     justify-content: flex-end;
     gap: 8px;
 }
